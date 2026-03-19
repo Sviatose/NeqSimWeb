@@ -1,0 +1,19 @@
+{
+  "name": "NeqSimWeb",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" },
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.12" },
+    "ghcr.io/devcontainers/features/java:1": { "version": "21" }
+  },
+  "postCreateCommand": "npm install && pip install -r requirements.txt",
+  "forwardPorts": [5173, 3001],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
